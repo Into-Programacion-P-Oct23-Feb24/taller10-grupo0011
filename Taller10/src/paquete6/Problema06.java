@@ -5,10 +5,32 @@
  */
 package paquete6;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
  */
 public class Problema06 {
-    
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        sc.useLocale(Locale.US);
+        String[][] estudiantes = {{"Sarah Ward", "Philip Payne"},
+        {"Carrie Burton", "Lauren Rice"},
+        {"Emma Escobar", "Lori Flores"},
+        {"Steven West", "Toni Martin"}
+        };
+        String cadena;
+        for (int f = 0; f < estudiantes.length; f++) {
+            for (int c = 0; c < estudiantes[f].length; c++) {
+                cadena = estudiantes[f][c];
+                if (cadena.length() == 11) {
+                    System.out.printf("%s\n", estudiantes[f][c]);
+                }
+            }
+        }
+
+    }
 }
